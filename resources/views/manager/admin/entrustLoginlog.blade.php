@@ -1,0 +1,42 @@
+@extends('manager.superUI')
+@section('content')
+<table id="tbl-activities" class="table table-hover">
+    <thead>
+    <tr>
+        会员_{{$data[0]->login_name}}_的登录日志列表
+    </tr>
+    <tr>
+        <th>序号</th>
+        <th>会员类型</th>
+        <th>会员名</th>
+        <th>登录IP</th>
+        <th>登录结果</th>
+        <th>登录线路</th>
+        <th>登录地区</th>
+        <th>登录时间</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach($data as $key => $v)
+        <tr>
+            <td>{{$key+1}}</td>
+            <td>{{config('enums.member_agent_admin_type')[$v->member_agent_admin_type]}}}</td>
+            <td>{{$v->login_name}}</td>
+            <td>{{$v->login_ip}}</td>
+            <td>{{config('enums.login_result')[$v->login_result]}}</td>
+            <td>{{$v->login_line}}</td>
+            <td>{{$v->login_area}}</td>
+            <td>{{$v->record_time}}</td>
+        </tr>
+    @endforeach
+    </tbody>
+</table>
+<style>
+    #tbl-activities{
+        background-color:#FFFFFF;
+    }
+</style>
+<div class="box-info">
+	{{$data->links()}}
+</div>
+@endsection

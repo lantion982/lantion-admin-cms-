@@ -1,0 +1,46 @@
+html, body {font-size:15px; padding:0; margin:0;}
+.container {width:100%;}
+.container:before, .container:after, .clearfix:before, .clearfix:after, .dialog-header:before, .dialog-header:after { display: table; content: " "; }
+.container:after, .clearfix:after, .dialog-header:after { clear: both; }
+.pull-right {float:right !important;}
+.pull-left {float:left !important;}
+.list-unstyled { padding-left: 0; list-style: none; }
+.btn { padding: 5px 20px; font-size: 14px; text-align: center; vertical-align: middle; color: #fff; border:none;}
+.btn-sm { padding: 2px 10px; font-size: 13px; text-align: center; vertical-align: middle; color: #fff; border:none;}
+.mybtn {background-color: #5cb85c;}
+.mybtn:focus, .mybtn.focus { background-color: #449d44;  }
+.mybtn:hover { background-color: #449d44; }
+.yebtn {background-color: #f93; }
+.yebtn:focus, .mybtn.focus { background-color: #e82;  }
+.yebtn:hover { background-color: #e82; }
+.defbtn {background-color: #ddd; color:#333;}
+.defbtn:focus, .mybtn.focus { background-color: #ccc;  }
+.defbtn:hover { background-color: #ccc; }
+
+input:focus {outline: none;}
+select:focus {outline: none;}
+.input_box {border:1px solid #ddd; overflow:hidden; height:24px;}
+.input_box input {border:none;}
+.input_box select {border:none;}
+.longinput {width:160px; height:22px;}
+select.longinput {height:24px;}
+
+.dialog {width:200px; border:1px solid #ddd; background:#fff; display:none; box-shadow: 0 3px 9px rgba(0, 0, 0, .5);}
+.dialog-header {border-bottom:1px solid #ddd; padding:10px;}
+.dialog-title {float:left !important;}
+.dialog-close {float: right !important; cursor:pointer;}
+.dialog-body {padding:10px;}
+
+.bodybox {box-sizing: border-box; background:#fff; border:1px solid #ddd; margin:50px auto 0 auto; padding:20px; box-shadow: 0 2px 8px rgba(170, 170, 170, 0.6);}
+
+.w-2{width:50%; float:left; box-sizing: border-box; position: relative;}
+.w-2:nth-child(2n+1){padding-left:0; padding-right:.8rem}
+.w-2:nth-child(2n){ padding-left: .8rem;padding-right:0;}
+
+.w-3{width:33.33%; padding:.6rem .4rem; float:left; box-sizing: border-box; position: relative;}
+.w-3:nth-child(3n+1){padding-left:0; padding-right:.8rem}
+.w-3:nth-child(3n){ padding-left: .8rem;padding-right:0;}
+
+@media screen and (max-width: 767px) {
+.bodybox {width:100%; box-sizing: border-box; margin:0; border:none; box-shadow:none;}
+}
